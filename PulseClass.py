@@ -13,8 +13,8 @@ class PulseSolution:
         self.zsol = zsol # solution domain
         self.time = time 
         self.Nsq = Nsq[0:len(zsol)] 
-        self.data_b = np.zeros((len(time),len(zsol), len(x))) # buoyancy data array
-        self.data_w = np.zeros((len(time),len(zsol), len(x)))
+        self.data_b = np.zeros((len(time),len(zdom), len(x))) # buoyancy data array
+        self.data_w = np.zeros((len(time),len(zdom), len(x)))
         if domain not in ('infinite', 'periodic'):
             raise Exception, self.domain + 'is not a valid domain type' 
         self.domain = domain
